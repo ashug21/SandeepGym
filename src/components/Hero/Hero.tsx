@@ -34,7 +34,8 @@ const slides = [
 
 export default function Hero() {
   const [index, setIndex] = useState(0);
-  const autoplayRef = useRef(null);
+  const autoplayRef = useRef<NodeJS.Timeout | null>(null);
+
 
   useEffect(() => {
     startAutoplay();
